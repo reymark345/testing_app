@@ -11,9 +11,9 @@ class _GoogleMapScreenState extends State<GoogleMapScreen>{
     setState(() {
       _markers.add(
         Marker(markerId: MarkerId('id-1'),
-          position:  LatLng(8.9475, 125.5406),
+          position:  LatLng(39.9042, 116.4074),
           infoWindow: InfoWindow(
-            title: 'Mackys house',
+            title: 'Sample Marker',
             snippet: 'A secret Place',
           )
         ),
@@ -24,14 +24,27 @@ class _GoogleMapScreenState extends State<GoogleMapScreen>{
   Widget build(BuildContext context){
     return Scaffold(
         appBar: AppBar(
-          title: Text('Google Map'),
+          title: Text('API MAP'),
+
         ),
-        body: GoogleMap(
-            onMapCreated:  _onMapCreated,
-            markers: _markers,
-            initialCameraPosition: CameraPosition(target: LatLng(8.9475, 125.5406),
-              zoom: 15,
-            ))
+
+        body:Padding(
+            padding: EdgeInsets.only(bottom: 16.0),
+
+
+            child : GoogleMap(
+                onMapCreated:  _onMapCreated,
+                markers: _markers,
+                initialCameraPosition: CameraPosition(target: LatLng(39.9042, 116.4074),
+                  zoom: 15,
+                ))),
+
+        // body: GoogleMap(
+        //     onMapCreated:  _onMapCreated,
+        //     markers: _markers,
+        //     initialCameraPosition: CameraPosition(target: LatLng(39.9042, 116.4074),
+        //       zoom: 15,
+        //     ))
 
     );
   }
