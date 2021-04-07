@@ -20,7 +20,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
+
     return new MaterialApp(
+
       debugShowCheckedModeBanner: false,
       title: 'Login PHP My Admin',
       theme:new ThemeData(scaffoldBackgroundColor: const Color(0xBEFFFFFF)),
@@ -36,6 +38,7 @@ class MyApp extends StatelessWidget {
 
 class MyHomePage extends StatefulWidget {
   @override
+
   _MyHomePageState createState() => _MyHomePageState();
 }
 
@@ -71,7 +74,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Future<List> _login() async {
     try{
       // final response = await http.post(Uri.parse("http://192.168.254.108/my_store/login.php"), body: {
-      final response = await http.post(Uri.parse("http://172.26.155.235/my_store/login.php"), body: {
+      final response = await http.post(Uri.parse("http://192.168.254.101/my_store/login.php"), body: {
         "username": user.text,
         "password": pass.text,
       });
