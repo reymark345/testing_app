@@ -14,7 +14,7 @@ class AdminPage extends StatelessWidget {
     return MaterialApp(
       title: 'Mapping',
       theme: ThemeData(
-        primarySwatch: Colors.deepPurple,
+        primarySwatch: Colors.deepOrange,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home:MyHomePage(),
@@ -28,7 +28,7 @@ class MyHomePage extends StatefulWidget{
 }
 
 Widget _content = Container();
-Color color = Colors.deepPurple;
+Color color = Colors.deepOrange;
 class HomePage extends State<MyHomePage>{
   @override
   Widget build(BuildContext context){
